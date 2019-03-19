@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAV*/
+
+span {
+    position: fixed;
+    border: 2px solid black;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    top: 10px;
+    right: 10px;
+    transition: .5s;
+    z-index: 2;
+}
+
+span:hover {
+    color: #333;
+}
+
+
+nav {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, red, purple);
+    position: fixed;
+    top: -100%;
+    left: 0;
+    transition: .5s;
+    z-index: 1;
+}
+
+nav ul {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+nav ul li {
+    list-style: none;
+    display: block;
+    width: 100%;
+    height: 25%;
+    font-weight: 700;
+    background: transparent;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+i {
+    transition: .5s;
+}
+
+nav ul li:first-child,
+nav ul li:nth-child(2),
+nav ul li:nth-child(3),
+nav ul li:nth-child(4) {
+    box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, .3);
+}
+
+/*menu animation active*/
+i.active {
+    transform: rotate(180deg);
+}
+
+nav.active {
+    top: 0;
+}
+
+
+li:hover {
+    background: rgba(0, 0, 0, .3);
+    color: white;
+}
+
+
+
+
+/* Header Banner*/
+header {
+    width: 100%;
+    height: 100vh;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(192, 81, 81, 0.743), rgb(192, 81, 81), rgb(210, 56, 56));
+    border-bottom: 3px solid rgba(145, 15, 15, 0.736);
+    position: relative;
+}
+
+.banner h1 {
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 0 0 10px silver;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: h1BannerAnimation 5s linear infinite;
+}
+
+.banner img {
+    position: absolute;
+
+}
+
+.banner .imgTruskawka {
+    width: 45%;
+    top: 15px;
+    left: 15px;
+    animation: imgBannerAnimation 2s linear infinite;
+}
+
+.banner .imgBorowka {
+    width: 60%;
+    bottom: 15px;
+    right: 25px;
+    animation: imgBannerAnimation 2s linear infinite 1s;
+}
+
+@keyframes imgBannerAnimation {
+    0% {
+        transform: rotate(5deg);
+    }
+
+    5% {
+        transform: rotate(0);
+    }
+
+    10% {
+        transform: rotate(-5deg);
+    }
+
+    15% {
+        transform: rotate(0);
+    }
+
+    20% {
+        transform: rotate(5deg);
+    }
+
+    25% {
+        transform: rotate(0);
+    }
+
+    30% {
+        transform: rotate(-5deg);
+    }
+
+    35% {
+        transform: rotate(0);
+    }
+
+    40% {
+        transform: rotate(5deg);
+    }
+
+    45% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    55% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes h1BannerAnimation {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+
+    25% {
+        transform: translate(-45%, -50%);
+    }
+
+    50% {
+        transform: translate(-50%, -50%);
+    }
+
+    75% {
+        transform: translate(-45%, -50%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+
+/*article*/
+
+section.content {
+    background-image: linear-gradient(to bottom, rgb(210, 56, 56), rgb(233, 105, 105));
+}
+
+article {
+    min-height: 100vh;
+    width: 100%;
+    padding: 10px;
+}
+
+section.content h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+section.content h1::after {
+    content: '';
+    display: block;
+    width: 65%;
+    margin: 5px auto 15px auto;
+    height: 3px;
+    background: black;
+
+}
+
+article p {
+    font-size: 24px;
+    text-align: justify;
+}
+
+article img {
+
+    display: block;
+    height: 150px;
+    margin: 48px auto;
+}
+
+div.contact {
+    padding-bottom: 32px;
+}
+
+div.contact a {
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+}
+
+div.contact a i {
+    margin-right: 15px;
+}
+
+
+@media (orientation: landscape) {
+    .banner .imgTruskawka {
+        width: 20%;
+        top: 15px;
+        left: 15px;
+    }
+
+    .banner .imgBorowka {
+        width: 25%;
+        bottom: 15px;
+        right: 25px;
+    }
+}
+
+@media (min-width:720px) {
+    article p {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    article {
+        min-height: auto;
+        padding: 32px;
+    }
+
+    .banner h1 {
+        top: 48px;
+    }
+
+    .banner .imgTruskawka {
+        width: 20%;
+    }
+
+    header span {
+        display: none;
+    }
+
+    header nav {
+        top: 50%;
+        left: 50%;
+        height: auto;
+        width: auto;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        background: limegreen;
+        border-radius: 25px;
+        position: absolute;
+    }
+
+    header nav ul {
+        text-align: center;
+        display: flex;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        flex: 0 1 25%;
+        height: 48px;
+        line-height: 48px;
+        font-size: 32px;
+
+    }
+
+    nav ul li:first-child,
+    nav ul li:nth-child(2),
+    nav ul li:nth-child(3),
+    nav ul li:nth-child(4) {
+        box-shadow: none;
+    }
+
+    nav ul li:last-child {
+        border-radius: 0 25px 25px 0;
+    }
+
+    nav ul li:first-child {
+        border-radius: 25px 0 0 25px;
+    }
+}
