@@ -214,11 +214,16 @@ header {
 
 section.content {
     background-image: linear-gradient(to bottom, rgb(210, 56, 56), rgb(233, 105, 105));
+    padding: 10%;
 }
 
+
 article {
-    min-height: 100vh;
-    width: 100%;
+    min-height: 90vh;
+    width: 90%;
+    border-radius: 32px;
+    margin: 5vh auto;
+    background: rgba(255, 255, 255, .3);
     padding: 10px;
 }
 
@@ -297,7 +302,11 @@ div.contact a i {
     }
 
     .banner .imgTruskawka {
-        width: 20%;
+        width: 25%;
+    }
+
+    .banner .imgBorowka {
+        width: 35%;
     }
 
     header span {
@@ -305,7 +314,7 @@ div.contact a i {
     }
 
     header nav {
-        top: 50%;
+        top: 25%;
         left: 50%;
         height: auto;
         width: auto;
@@ -314,6 +323,14 @@ div.contact a i {
         background: limegreen;
         border-radius: 25px;
         position: absolute;
+    }
+
+    header nav.scrollDown {
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, .3);
+        position: fixed;
     }
 
     header nav ul {

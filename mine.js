@@ -19,3 +19,18 @@ const imgBannerTruskawka = document.querySelector('.imgTruskawka');
 if (window.innerWidth >= 720) {
     imgBannerTruskawka.style.top = `${window.innerHeight - 15 - imgBannerTruskawka.offsetHeight }px`
 };
+
+// zmiana wyglądu navigacji podczas scrollowania
+
+const navTopBorder = nav.offsetTop;
+
+document.addEventListener('scroll', () => {
+
+    let yScrollPosition = scrollY;
+    if (yScrollPosition >= (navTopBorder - 32)) {
+        nav.classList.add('scrollDown');
+    }
+    if (yScrollPosition <= (navTopBorder - 32)) {
+        nav.classList.remove('scrollDown');
+    }
+})
